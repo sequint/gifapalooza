@@ -4,10 +4,10 @@ document.getElementById('search-btn').addEventListener('click', event => {
   
   axios.get(`https://api.giphy.com/v1/gifs/search?api_key=9zby5Ocx2Cn3yzfMeS7n4QpW9UWQ1npn&limit=20&q=${input}`)
     .then(response => {
-      let imageList = response.data.data
-      console.log(imageList)
+      let gifList = response.data.data
+      console.log(gifList)
 
-      imageList.forEach(imgObj => {
+      gifList.forEach(imgObj => {
 
         let gif = imgObj.images.fixed_width.url
 
