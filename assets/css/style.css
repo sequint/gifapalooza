@@ -39,8 +39,7 @@ body {
   height: 75px;
   width: 75px;
   box-shadow: 0px 0px 5px 5px #D8D8F6;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0px 20px 20px;
 }
 
 .gif {
