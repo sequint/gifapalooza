@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>gifapalooza</title>
   <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -15,7 +18,7 @@
   <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg navbar-light nav-cust-style">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">gifapalooza</a>
+        <a class="navbar-brand logo" href="#">gifapalooza</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -30,12 +33,14 @@
       </div>
     </nav>
     <div class="container">
-      <h1 class="title text-center">gifapalooza</h1>
+      <h1 class="title text-center logo page-title">gifapalooza</h1>
       <h5 class="site-description text-center">Search for your favorite GIFs and save them to your own GIF library!</h5>
       <div class="search-result-area">
         <h6 class="search-prompt text-center">Search for a GIF below</h6>
-        <input type="text" class="d-inline search-input" id="search-input">
-        <button class="search-btn" id="search-btn">Search</button>
+        <div class="input-wrap">
+          <input type="text" class="d-inline search-input" id="search-input">
+          <button class="search-btn" id="search-btn">Search</button>
+        </div>
         <div class="row" id="results"></div>
       </div>
     </div>
