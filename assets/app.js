@@ -6,30 +6,25 @@ document.getElementById('search-btn').addEventListener('click', event => {
     .then(response => {
       let imageList = response.data.data
       console.log(imageList)
-      let gifImg = imageList[0].images.fixed_width.url
 
-      // let btnEl = document.createElement('button')
-      // btnEl.className = 'btn btn-primary save'
-      // btnEl.textContent = 'Save GIF'
+      imageList.forEach(imgObj => {
 
-      // let imgEl = document.createElement('img')
-      // imgEl.className = 'card-img-top'
-      // imgEl.src = gifImg
+        let gif = imgObj.images.fixed_width.url
 
-      // let divNested = document.createElement('div')
-      // divNested.className = 'card-body'
-      // divNested.contains = btnEl
+        let divEl = document.createElement('div')
+        divEl.className = 'col-3 card gif'
+        divEl.innerHTML = `
+        <img src=${gif} class="card-img-top" alt="GIF">
+        <div class="card-body">
+          <button class="btn btn-primary">Save GIF</button>
+        </div>
+        `
 
-      let divEl = document.createElement('div')
-      divEl.className = 'col-3 card gif'
-      divEl.innerHTML = `
-      <img src=${gifImg} class="card-img-top" alt="GIF">
-      <div class="card-body">
-        <button class="btn btn-primary">Save GIF</button>
-      </div>
-      `
+        document.getElementById('results').append(divEl)
 
-      document.getElementById('results').append(divEl)
+      })
+
+      
     })
     .catch(error => console.log(error))
 
