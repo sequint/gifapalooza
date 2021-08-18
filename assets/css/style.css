@@ -46,10 +46,27 @@ body {
   margin-left: 45px;
 }
 
+.cust-card-body {
+  height: 70px;
+}
+
 .gif {
   width: 18rem;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+.save-gif {
+  color: white;
+  border: none;
+  background-color: #978897;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 5px #D8D8F6;
+  float: bottom;
+}
+
+.save-gif:hover {
+  background-color: #D8D8F6;
 }
 
 @media only screen and (max-width: 576px) {

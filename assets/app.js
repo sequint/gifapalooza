@@ -19,7 +19,7 @@ document.getElementById('search-btn').addEventListener('click', event => {
         divEl.className = 'col-3 card gif'
         divEl.innerHTML = `
         <img src=${gif} class="card-img-top" id=${gifId} alt="GIF">
-        <div class="card-body">
+        <div class="card-body cust-card-body">
           <button class="btn btn-primary save-gif">Save GIF</button>
         </div>
         `
