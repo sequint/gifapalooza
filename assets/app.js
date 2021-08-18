@@ -28,4 +28,6 @@ document.getElementById('search-btn').addEventListener('click', event => {
     })
     .catch(error => console.log(error))
 
+  document.getElementById('search-input').value = ''
+
 })
