@@ -13,13 +13,14 @@ document.getElementById('search-btn').addEventListener('click', event => {
       gifList.forEach(imgObj => {
 
         let gif = imgObj.images.fixed_width.url
+        let gifId = imgObj.slug
 
         let divEl = document.createElement('div')
         divEl.className = 'col-3 card gif'
         divEl.innerHTML = `
-        <img src=${gif} class="card-img-top" alt="GIF">
+        <img src=${gif} class="card-img-top" id=${gifId} alt="GIF">
         <div class="card-body">
-          <button class="btn btn-primary">Save GIF</button>
+          <button class="btn btn-primary save-gif">Save GIF</button>
         </div>
         `
 
@@ -32,5 +33,17 @@ document.getElementById('search-btn').addEventListener('click', event => {
     .catch(error => console.log(error))
 
   document.getElementById('search-input').value = ''
+
+})
+
+document.addEventListener('click', event => {
+
+  if (event.target.classList.contains('save-gif')) {
+
+    let selectedId = event.target.parentNode.parentNode.children[0].id
+    let selectedItem = event.target.parentNode.parentNode.children[0].src
+
+    localStorage.setItem(selectedId, selectedItem)
+  }
 
 })
