@@ -44,6 +44,8 @@ document.addEventListener('click', event => {
     let selectedItem = event.target.parentNode.parentNode.children[0].src
 
     localStorage.setItem(selectedId, selectedItem)
+
+    event.target.parentNode.parentNode.remove()
   }
 
 })
