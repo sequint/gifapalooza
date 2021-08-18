@@ -1,5 +1,8 @@
 document.getElementById('search-btn').addEventListener('click', event => {
 
+  // Clear prior display values.
+  document.getElementById('results').innerHTML = ''
+
   let input = document.getElementById('search-input').value
   
   axios.get(`https://api.giphy.com/v1/gifs/search?api_key=9zby5Ocx2Cn3yzfMeS7n4QpW9UWQ1npn&limit=20&q=${input}`)
