@@ -1,3 +1,20 @@
+body {
+  background-color: #D8D8F6;
+}
+
+.nav-cust-style {
+  background-color: #B18FCF;
+}
+
+.search-result-area {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.search-input {
+  margin: 10px auto 10px auto;
+}
+
 .gif {
   width: 18rem;
 }
