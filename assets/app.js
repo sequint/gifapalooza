@@ -7,13 +7,15 @@ document.getElementById('search-btn').addEventListener('click', event => {
       let imageList = response.data.data
       console.log(imageList)
 
+      let gif = imageList[0].images.fixed_width.url
+
+
+
       document.getElementById('results').innerHTML = `
-      <div class="card" style="width: 18rem;">
-        <img src="${imageList[0].images.fixed_width_small}" class="card-img-top" alt="GIF">
+      <div class="card gif">
+        <img src=${gif} class="card-img-top" alt="GIF">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <button class="btn btn-primary">Save GIF</button>
         </div>
       </div>
       `
